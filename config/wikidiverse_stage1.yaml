@@ -1,0 +1,50 @@
+run_name: WikiDiverse
+task: wikidiverse
+seed: 43
+pretrained_model: 'openai/clip-vit-base-patch32'
+lr:  1e-6
+
+
+first_stage_ckpt: None
+freeze_clip_in_second_stage: False
+use_enhance: False
+
+
+data:
+  folder: data/WikiDiverse
+  train_data: WIKIDIVERSE_train.jsonl
+  valid_data: WIKIDIVERSE_valid.jsonl
+  test_data: WIKIDIVERSE_test.jsonl
+  image_h5: image.h5py
+  entity: entities.jsonl
+
+  num_train_candidate: 1
+  percentage: 1
+
+  batch_size: 64
+  num_workers: 8
+  text_max_length: 64
+
+  eval_chunk_size: 6000
+  eval_batch_size: 20
+  embed_update_batch_size: 512
+
+
+model:
+  input_hidden_dim: 512
+  input_image_hidden_dim: 768
+  hidden_dim: 256
+  dv: 256
+  dt: 512
+  tlft_hidden_dim: 256
+  vlft_hidden_dim: 256
+  clft_hidden_dim: 256
+
+
+trainer:
+  accelerator: 'gpu'
+  devices: 1
+  max_epochs: 30
+  num_sanity_val_steps: 0
+  check_val_every_n_epoch: 2
+  log_every_n_steps: 30

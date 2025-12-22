@@ -1,0 +1,34 @@
+# python
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+dist/
+build/
+
+# environments
+.venv/
+venv/
+*.key
+
+# jupyter
+.ipynb_checkpoints/
+
+# logs / outputs
+logs/
+runs/
+checkpoints/
+outputs/
+
+# data
+data/
+*.pt
+*.pth
+*.ckpt
+*.bin
+
+# mac/windows
+.DS_Store
+Thumbs.db
+
+.idea/
