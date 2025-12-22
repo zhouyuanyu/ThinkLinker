@@ -18,7 +18,7 @@ Please install the specified versions of Python libraries according to the `requ
 
 ## Dataset
 
-1. Download the datasets from [FissFuse paper]([pengfei-luo/FissFuse: [ACM MM 2024\] Bridging Gaps in Content and Knowledge for Multimodal Entity Linking](https://github.com/pengfei-luo/FissFuse)).
+1. Download the datasets from [FissFuse paper](https://github.com/pengfei-luo/FissFuse).
 2. Create a data root directory at `./data/` and place the downloaded datasets under this directory.
 
 
