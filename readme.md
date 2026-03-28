@@ -4,10 +4,10 @@
 
 ## Dependencies
 
-We recommend using Conda to manage virtual environments, and we use Python version **3.9.25**.
+We recommend using Conda to manage virtual environments, and we use Python version **3.9**.
 
 ```python
-conda create -n thinklinker python==3.8.12
+conda create -n thinklinker python==3.9
 conda activate thinklinker
 pip install -r requirements.txt
 ```
