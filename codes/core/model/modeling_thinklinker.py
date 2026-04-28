@@ -106,7 +106,7 @@ class TextLFTModule(nn.Module):
 
         d_in = args.model.input_hidden_dim
         self.d_proj = args.model.tlft_hidden_dim
-        self.rank = args.model.tlft_hidden_dim
+        self.rank = args.model.rank_num
 
         self.fc = nn.Linear(d_in, self.d_proj)
         self.cls_factor = nn.Parameter(torch.empty(self.rank, self.d_proj + 1, self.d_proj))
@@ -218,7 +218,7 @@ class VisualLFTModule(nn.Module):
 
         d_in = args.model.dv
         self.d_proj = args.model.vlft_hidden_dim
-        self.rank = args.model.vlft_hidden_dim
+        self.rank = args.model.rank_num
 
         self.fc = nn.Linear(d_in, self.d_proj)
         self.cls_factor = nn.Parameter(torch.empty(self.rank, self.d_proj + 1, self.d_proj))
@@ -333,7 +333,7 @@ class CrossLFTModule(nn.Module):
 
         d_proj = args.model.clft_hidden_dim
         self.d_proj = d_proj
-        self.rank = args.model.clft_hidden_dim
+        self.rank = args.model.rank_num
 
         self.text_fc = nn.Linear(d_text_in, d_proj)
         self.image_fc = nn.Linear(d_img_in, d_proj)

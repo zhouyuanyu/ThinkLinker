@@ -36,6 +36,7 @@ model:
   hidden_dim: 256
   dv: 256
   dt: 512
+  rank_num: 4
   tlft_hidden_dim: 256
   vlft_hidden_dim: 256
   clft_hidden_dim: 256
