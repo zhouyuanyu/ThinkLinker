@@ -1,6 +1,6 @@
 # ThinkLinker: From Low-Rank Interaction to Knowledge-Aware Verification for Multimodal Entity Linking
 
-
+This is the implementation for the paper "ThinkLinker: From Low-Rank Interaction to Knowledge-Aware Verification for Multimodal Entity Linking" published in Findings of ACL 2026.
 
 ## Dependencies
 
